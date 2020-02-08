@@ -1,0 +1,69 @@
+body {
+    background-color: #f7f7f7;
+    color: #000;
+    overflow: hidden;
+}
+
+nav.navbar.navbar-light {
+    background-color: #3795DF !important;
+    height: 80px;
+    padding: 0;
+    padding-left: 15px;
+}
+
+button.inscription {
+    font-size: 40px;
+    color: #e9f5fe;
+    padding: 0;
+}
+
+button.inscription > img.logo {
+    width: 50px;
+    padding-bottom: 7px;
+}
+
+.container {
+    max-width: none;
+}
+
+.login-block {
+    margin: auto;
+    margin-top: 100px;
+    width: 80%;
+    height: 400px;
+}
+
+.login-block > h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    color: #3795DF;
+}
+
+.login-block img {
+    width: 80px;
+}
+
+.login-block > div {
+    padding: 0;
+}
+
+.green-text {
+    color: #C6EEA4;
+}
+
+.left-div-logo {
+    width: 100%;
+    font-size: 40px;
+}
+
+.left-div-logo > img {
+    width: 80px;
+    vertical-align: center;
+}
+
+.linear-gradient {
+    background: linear-gradient(to right, #3795DF, #C6EEA4);
+    color: #fff;
+    border-radius: 20px;
+}
