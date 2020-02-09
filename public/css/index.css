@@ -1,7 +1,6 @@
 body {
     background-color: #f7f7f7;
-    color: #000;
-    overflow: hidden;
+    color: #424343;
 }
 
 nav.navbar.navbar-light {
@@ -66,4 +65,19 @@ button.inscription > img.logo {
     background: linear-gradient(to right, #3795DF, #C6EEA4);
     color: #fff;
     border-radius: 20px;
+}
+
+.card {
+    height: 390px;
+    border: 0;
+}
+
+.card > .card-header {
+    font-size: 20px;
+}
+
+.card > .card-header > img {
+    padding-bottom: 3px;
+    margin-right: 5px;
+    width: 20px;
 }
