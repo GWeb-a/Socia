@@ -2,19 +2,29 @@
     flex-direction: row;
 }
 
+.list-group-item,
+.list-group-item:hover,
+.list-group-item.active {
+    -webkit-border-radius: 10px 0 0 0;
+    -moz-border-radius: 10px 0 0 0;
+    border-radius: 10px 0 0 0;
+}
+
+.list-group-item:nth-of-type(2n),
+.list-group-item:hover:nth-of-type(2n),
+.list-group-item.active:nth-of-type(2n) {
+    -webkit-border-radius: 0 10px 0 0;
+    -moz-border-radius: 0 10px 0 0;
+    border-radius: 0 10px 0 0;
+}
+
 .list-group-item, .list-group-item.active {
     background-color: #f7f7f7;
     color: inherit;
     border: 0;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    border-radius: 0;
 }
 
 .list-group-item:hover {
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    border-radius: 0;
     color: #fff;
 }
 
