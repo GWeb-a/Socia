@@ -29,7 +29,6 @@ button.inscription > img.logo {
     margin: auto;
     margin-top: 100px;
     width: 80%;
-    height: 400px;
 }
 
 .login-block > h1 {
@@ -45,6 +44,7 @@ button.inscription > img.logo {
 
 .login-block > div {
     padding: 0;
+    margin-bottom: 20px ;
 }
 
 .green-text {
@@ -72,7 +72,6 @@ button.inscription > img.logo {
 }
 
 .card {
-    height: 390px;
     border: 0;
 }
 
