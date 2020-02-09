@@ -3,6 +3,7 @@
 {% block css %}
     {{ parent() }}
     <link rel="stylesheet" href="{{ asset('css/index.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/security_form.css') }}">
 {% endblock %}
 
 {% block body %}
@@ -26,11 +27,49 @@
             <div class="col-md-2"></div>
             <div class="col-md-5">
                 <div class="card">
-                    <div class="card-header linear-gradient">
-                        <img src="{{ asset('img/correct.png') }}" alt="profile"> Inscris-toi en moins d'une minute
+                    <div class="card-header">
+                        <img src="{{ asset('img/correct.png') }}" alt="profile"> Rejoins-nous ou connecte-toi
                     </div>
                     <div class="card-body">
-                        slt
+                        <div class="list-group" id="list-tab" role="tablist">
+                            <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Inscription</a>
+                            <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Connexion</a>
+                        </div>
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+                                Inscription
+                            </div>
+                            <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+                                <form method="post">
+                                    {% if error %}
+                                        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                                    {% endif %}
+
+                                    {% if app.user %}
+                                        <div class="mb-3">
+                                            You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
+                                        </div>
+                                    {% endif %}
+
+                                    <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" placeholder="Adresse mail" required autofocus>
+                                    <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Mot de passe" required>
+
+                                    <input type="hidden" name="_csrf_token"
+                                           value="{{ csrf_token('authenticate') }}"
+                                    >
+
+                                    <div class="checkbox mb-3">
+                                        <label>
+                                            <input type="checkbox" name="_remember_me"> Se souvenir de moi
+                                        </label>
+                                    </div>
+
+                                    <button class="btn btn-lg btn-validate linear-gradient" type="submit">
+                                        Valider
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

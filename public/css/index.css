@@ -64,7 +64,11 @@ button.inscription > img.logo {
 .linear-gradient {
     background: linear-gradient(to right, #3795DF, #C6EEA4);
     color: #fff;
-    border-radius: 20px;
+    border: 0;
+}
+
+.linear-gradient:hover {
+    color: #fff;
 }
 
 .card {
@@ -74,6 +78,8 @@ button.inscription > img.logo {
 
 .card > .card-header {
     font-size: 20px;
+    background-color: #3795DF;
+    color: #fff;
 }
 
 .card > .card-header > img {

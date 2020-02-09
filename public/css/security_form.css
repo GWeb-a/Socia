@@ -1,0 +1,53 @@
+.list-group {
+    flex-direction: row;
+}
+
+.list-group-item, .list-group-item.active {
+    background-color: #f7f7f7;
+    color: inherit;
+    border: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+.list-group-item:hover {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    color: #fff;
+}
+
+.list-group-item:hover, .list-group-item.active {
+    background-color: #3795DF;
+    color: #fff;
+}
+
+.list-group-item + .list-group-item.active {
+    margin-top: 0;
+}
+
+.tab-content > .tab-pane {
+    padding-top: 20px;
+}
+
+.tab-content > .tab-pane > form > input {
+    border: 0;
+    border-bottom: 1px solid #424343;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    margin-bottom: 20px;
+}
+
+.tab-content > .tab-pane > form > div > label > input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.tab-content > .tab-pane > form > button {
+    width: 100%;
+}
+
+.btn-validate {
+    background-color: #3795DF;
+}
