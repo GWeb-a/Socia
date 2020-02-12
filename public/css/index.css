@@ -16,6 +16,10 @@ button.inscription {
     padding: 0;
 }
 
+button.inscription:hover {
+    color: inherit;
+}
+
 button.inscription > img.logo {
     width: 50px;
     padding-bottom: 7px;
@@ -47,13 +51,9 @@ button.inscription > img.logo {
     margin-bottom: 20px ;
 }
 
-.green-text {
-    color: #C6EEA4;
-}
-
 .left-div-logo {
     width: 100%;
-    font-size: 40px;
+    font-size: 36px;
 }
 
 .left-div-logo > img {
@@ -85,4 +85,12 @@ button.inscription > img.logo {
     padding-bottom: 3px;
     margin-right: 5px;
     width: 20px;
+}
+
+.green-text {
+    color: #C6EEA4;
+}
+
+.blue-text {
+        color: #3795DF;
 }

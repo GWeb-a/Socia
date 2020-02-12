@@ -1,0 +1,91 @@
+{% extends 'index.html.twig' %}
+
+{% block css %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('css/user/home.css') }}">
+{% endblock %}
+
+{% block navbar %}
+    {#<nav class="navbar navbar-light">
+        <button class="btn inscription">
+            <img class="logo" src="{{ asset('img/logo.png') }}" alt="logo"><span class="font-weight-bold">Do<span class="green-text">Y</span>ou</span>
+        </button>
+
+        <div class="float-right mr-3"><a class="text-white" href="{{ path('app_logout') }}">Déconnexion</a></div>
+    </nav>#}
+    <!--Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <button class="btn inscription">
+            <img class="logo" src="{{ asset('img/logo.png') }}" alt="logo"><span class="font-weight-bold">Do<span class="green-text">Y</span>ou</span>
+        </button>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4"
+                aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse mr-3">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item avatar dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">
+                        <img src="{{ asset('img/avatar.jpg') }}" class="rounded-circle z-depth-0"
+                             alt="avatar image">
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-lg-right dropdown-secondary">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="{{ path('app_logout') }}">Déconnexion</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--/.Navbar -->
+{% endblock %}
+
+{% block content %}
+        <div class="content mt-5">
+            <h1>Fil d'actualité</h1>
+
+            <div class="question-block">
+                <div class="row">
+                    <div class="img-block">
+                        <img src="{{ asset('img/gianni_avatar.jpg') }}" alt="avatar">
+                    </div>
+                    <div class="question-content">
+                        <p class="float-right font-italic font-size-12">Le 10/02/2020 à 18h33</p>
+                        <p><span class="blue-text font-weight-bold">Gianni</span> vous a demandé :</p>
+                        <p>Que penses-tu de l'état actuel dans les pays francophones concernant le fromage ?</p>
+                        <p class="error">✘ Vous n'avez pas encore répondu.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question-block">
+                <div class="row">
+                    <div class="img-block">
+                        <img src="{{ asset('img/gianni_avatar.jpg') }}" alt="avatar">
+                    </div>
+                    <div class="question-content">
+                        <p class="float-right font-italic font-size-12">Le 10/02/2020 à 18h33</p>
+                        <p><span class="blue-text font-weight-bold">Gianni</span> vous a demandé :</p>
+                        <p>Quel âge as-tu ?</p>
+                        <p class="error">✘ Vous n'avez pas encore répondu.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question-block">
+                <div class="row">
+                    <div class="img-block">
+                        <img src="{{ asset('img/gianni_avatar.jpg') }}" alt="avatar">
+                    </div>
+                    <div class="question-content">
+                        <p class="float-right font-italic font-size-12">Le 10/02/2020 à 18h33</p>
+                        <p><span class="blue-text font-weight-bold">Gianni</span> vous a demandé :</p>
+                        <p>Où habites-tu ?</p>
+                        <p class="success"><span class="font-weight-bold">✓</span> A Lille ;-)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock %}
